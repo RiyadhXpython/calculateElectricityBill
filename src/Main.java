@@ -10,13 +10,13 @@ public class Main {
         double billAmount;
 
         if (electricityUsage <= 50){
-            billAmount = electricityUsage * 10;
+            billAmount = electricityUsage * 0.10;
         } else if (electricityUsage <= 150){
-            billAmount = 50 * 10 + (electricityUsage - 50) * 16;
+            billAmount = 50 * 0.10 + (electricityUsage - 50) * 0.16;
         } else if (electricityUsage <= 250){
-            billAmount = 50 * 10 + 100 * 16  + (electricityUsage - 150 ) * 22;
+            billAmount = 50 * 0.10 + 100 * 0.16  + (electricityUsage - 150 ) * 0.22;
         }else {
-            billAmount = 50 * 10 + 100 * 16 + 100  * 22 + (electricityUsage - 250) * 30;
+            billAmount = 50 * 0.10 + 100 * 0.16 + 100  * 0.22 + (electricityUsage - 250) * 0.30;
         }
         double ExtraCharge = (electricityUsage <= 250) ? 7 : 12; // used ternary operator instead of if else
         billAmount += billAmount;
